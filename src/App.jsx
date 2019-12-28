@@ -1,34 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { css, Global } from '@emotion/core';
+import { Route, Switch } from 'react-router-dom';
+import { Layout } from 'antd';
+
+const { Header, Footer, Content } = Layout;
 
 function App(props) {
   return (
-    <Router>
-      <Global
-        styles={css`
-          * {
-            margin: 0;
-            box-sizing: border-box;
-            behavior: smooth;
-          }
-
-          html {
-            font-family: 'Open Sans', sans-serif;
-          }
-
-          #root {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-        `}
-      />
-      <Switch>
-        <Route path="/" exact component={() => <div>Home</div>} />
-      </Switch>
-    </Router>
+    <Layout style={{ height: `100vh` }}>
+      <Header style={{ backgroundColor: `#fafafa` }}>header</Header>
+      <Layout>
+        <Content>
+          <Switch>
+            <Route path="/" exact render={() => <div>home</div>} />
+            <Route path="/work" exact render={() => <div>work</div>} />
+            <Route path="/contact" exact render={() => <div>contact</div>} />
+            <Route path="/about" exact render={() => <div>about</div>} />
+          </Switch>
+        </Content>
+      </Layout>
+      <Footer>footer</Footer>
+    </Layout>
   );
 }
 
