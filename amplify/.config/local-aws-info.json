@@ -1,0 +1,7 @@
+{
+    "rdwebsite": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "rdwebsite"
+    }
+}
