@@ -1,5 +1,5 @@
 module.exports = {
-	title: "My Site",
+	title: "SUB DOMAIN BABY!!!",
 	tagline: "The tagline of my site",
 	url: "https://russelldias.com",
 	baseUrl: "/",
