@@ -1,33 +1,42 @@
-# Website
+# Ant Design example
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+This example shows how to use Next.js along with [Ant Design of React](http://ant.design). This is intended to show the integration of this UI toolkit with the Framework.
 
-### Installation
+## Deploy your own
 
-```
-$ yarn
-```
+Deploy the example using [ZEIT Now](https://zeit.co/now):
 
-### Local Development
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/zeit/next.js/tree/canary/examples/with-ant-design-less)
 
-```
-$ yarn start
-```
+## How to use
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+### Using `create-next-app`
 
-### Build
+Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-```
-$ yarn build
+```bash
+npm init next-app --example with-ant-design-less with-ant-design-app
+# or
+yarn create next-app --example with-ant-design-less with-ant-design-app
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+### Download manually
 
-### Deployment
+Download the example:
 
+```bash
+curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-ant-design-less
+cd with-ant-design-less
 ```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+
+Install it and run:
+
+```bash
+npm install
+npm run dev
+# or
+yarn
+yarn dev
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Deploy it to the cloud with [ZEIT Now](https://zeit.co/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
