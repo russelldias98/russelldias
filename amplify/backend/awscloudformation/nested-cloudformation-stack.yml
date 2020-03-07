@@ -71,15 +71,15 @@
 		"apirusselldias": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-russelldias-rdwebsite-230452-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-russelldias-webruss-153543-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"Parameters": {
 					"CreateAPIKey": 1,
 					"AppSyncApiName": "russelldias",
 					"DynamoDBBillingMode": "PAY_PER_REQUEST",
 					"DynamoDBEnableServerSideEncryption": "false",
-					"S3DeploymentBucket": "amplify-russelldias-rdwebsite-230452-deployment",
-					"S3DeploymentRootKey": "amplify-appsync-files/a75bcf948fe4a2f4720a54047c6c8f56b030c05b",
-					"env": "rdwebsite"
+					"S3DeploymentBucket": "amplify-russelldias-webruss-153543-deployment",
+					"S3DeploymentRootKey": "amplify-appsync-files/41555b4d2b0cee316e76f1a0cd1da4538dd0f412",
+					"env": "webruss"
 				}
 			}
 		}

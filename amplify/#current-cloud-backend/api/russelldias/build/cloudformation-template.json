@@ -114,14 +114,14 @@
                         "ApiId"
                     ]
                 },
-                "Description": "rdweb",
+                "Description": "website",
                 "Expires": {
                     "Fn::If": [
                         "APIKeyExpirationEpochIsPositive",
                         {
                             "Ref": "APIKeyExpirationEpoch"
                         },
-                        1578899295
+                        1584180510
                     ]
                 }
             },
@@ -151,7 +151,7 @@
                 }
             }
         },
-        "ContactUs": {
+        "contact": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
                 "Parameters": {
@@ -216,7 +216,7 @@
                                 "Ref": "S3DeploymentRootKey"
                             },
                             "stacks",
-                            "ContactUs.json"
+                            "contact.json"
                         ]
                     ]
                 }
@@ -268,7 +268,7 @@
             "DependsOn": [
                 "GraphQLAPI",
                 "GraphQLSchema",
-                "ContactUs"
+                "contact"
             ]
         }
     },

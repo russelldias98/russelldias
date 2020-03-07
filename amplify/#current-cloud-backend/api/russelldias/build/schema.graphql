@@ -1,8 +1,8 @@
-type ContactUs {
+type contact {
   id: ID!
   name: String!
   email: String!
-  description: String!
+  description: String
 }
 
 enum ModelSortDirection {
@@ -10,8 +10,8 @@ enum ModelSortDirection {
   DESC
 }
 
-type ModelContactUsConnection {
-  items: [ContactUs]
+type ModelcontactConnection {
+  items: [contact]
   nextToken: String
 }
 
@@ -88,52 +88,52 @@ input ModelSizeInput {
   between: [Int]
 }
 
-input ModelContactUsFilterInput {
+input ModelcontactFilterInput {
   id: ModelIDInput
   name: ModelStringInput
   email: ModelStringInput
   description: ModelStringInput
-  and: [ModelContactUsFilterInput]
-  or: [ModelContactUsFilterInput]
-  not: ModelContactUsFilterInput
+  and: [ModelcontactFilterInput]
+  or: [ModelcontactFilterInput]
+  not: ModelcontactFilterInput
 }
 
 type Query {
-  getContactUs(id: ID!): ContactUs
-  listContactUss(filter: ModelContactUsFilterInput, limit: Int, nextToken: String): ModelContactUsConnection
+  getContact(id: ID!): contact
+  listContacts(filter: ModelcontactFilterInput, limit: Int, nextToken: String): ModelcontactConnection
 }
 
-input CreateContactUsInput {
+input CreateContactInput {
   id: ID
   name: String!
   email: String!
-  description: String!
+  description: String
 }
 
-input UpdateContactUsInput {
+input UpdateContactInput {
   id: ID!
   name: String
   email: String
   description: String
 }
 
-input DeleteContactUsInput {
+input DeleteContactInput {
   id: ID
 }
 
 type Mutation {
-  createContactUs(input: CreateContactUsInput!, condition: ModelContactUsConditionInput): ContactUs
-  updateContactUs(input: UpdateContactUsInput!, condition: ModelContactUsConditionInput): ContactUs
-  deleteContactUs(input: DeleteContactUsInput!, condition: ModelContactUsConditionInput): ContactUs
+  createContact(input: CreateContactInput!, condition: ModelcontactConditionInput): contact
+  updateContact(input: UpdateContactInput!, condition: ModelcontactConditionInput): contact
+  deleteContact(input: DeleteContactInput!, condition: ModelcontactConditionInput): contact
 }
 
-input ModelContactUsConditionInput {
+input ModelcontactConditionInput {
   name: ModelStringInput
   email: ModelStringInput
   description: ModelStringInput
-  and: [ModelContactUsConditionInput]
-  or: [ModelContactUsConditionInput]
-  not: ModelContactUsConditionInput
+  and: [ModelcontactConditionInput]
+  or: [ModelcontactConditionInput]
+  not: ModelcontactConditionInput
 }
 
 enum ModelAttributeTypes {
@@ -150,7 +150,7 @@ enum ModelAttributeTypes {
 }
 
 type Subscription {
-  onCreateContactUs: ContactUs @aws_subscribe(mutations: ["createContactUs"])
-  onUpdateContactUs: ContactUs @aws_subscribe(mutations: ["updateContactUs"])
-  onDeleteContactUs: ContactUs @aws_subscribe(mutations: ["deleteContactUs"])
+  onCreateContact: contact @aws_subscribe(mutations: ["createContact"])
+  onUpdateContact: contact @aws_subscribe(mutations: ["updateContact"])
+  onDeleteContact: contact @aws_subscribe(mutations: ["deleteContact"])
 }
