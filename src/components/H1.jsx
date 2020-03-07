@@ -13,7 +13,7 @@ export default function H1(props) {
 				color: "white",
 				whiteSpace: "pre",
 				margin: 0,
-				marginBottom: "40px"
+				marginBottom: "30px"
 			}}
 		>
 			{props.text}

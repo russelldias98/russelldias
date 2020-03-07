@@ -17,6 +17,7 @@
     "null-loader": "2.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-lottie": "^1.2.3",
     "yup": "^0.28.3"
   },
   "license": "ISC"
