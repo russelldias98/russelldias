@@ -1,6 +1,6 @@
 {
 	"api": {
-		"russelldias": {
+		"rbwebcontact": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
@@ -9,12 +9,13 @@
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"description": "website",
-							"apiKeyExpirationDays": 7
+							"description": "contatc",
+							"apiKeyExpirationDays": "2"
 						}
 					}
 				}
 			}
 		}
-	}
+	},
+	"function": {}
 }

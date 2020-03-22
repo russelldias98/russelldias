@@ -10,7 +10,7 @@ export const createContact = /* GraphQL */ `
       id
       name
       email
-      description
+      query
     }
   }
 `;
@@ -23,7 +23,7 @@ export const updateContact = /* GraphQL */ `
       id
       name
       email
-      description
+      query
     }
   }
 `;
@@ -36,7 +36,7 @@ export const deleteContact = /* GraphQL */ `
       id
       name
       email
-      description
+      query
     }
   }
 `;

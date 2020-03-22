@@ -13,7 +13,7 @@
 		}
 	},
 	"api": {
-		"russelldias": {
+		"rbwebcontact": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
@@ -22,21 +22,22 @@
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"description": "website",
-							"apiKeyExpirationDays": 7
+							"description": "contatc",
+							"apiKeyExpirationDays": "2"
 						}
 					}
 				},
-				"GraphQLAPIIdOutput": "yq4g4sz2nfh5zl5hjfrbzjhqnu",
-				"GraphQLAPIEndpointOutput": "https://kqjyxvxbgbgc3nkmmabba4nxj4.appsync-api.us-east-1.amazonaws.com/graphql",
-				"GraphQLAPIKeyOutput": "da2-lyzhvrauo5c6hn4zcygz7kuh5a"
+				"GraphQLAPIIdOutput": "p6vmla7xije4zmi3qpe7sg2fqy",
+				"GraphQLAPIEndpointOutput": "https://qxksrg4jt5fnnd33lyumks4p3m.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-a4wqwzhkcbhrtd5og67du4hiwy"
 			},
 			"providerMetadata": {
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-russelldias-webruss-153543-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-				"logicalId": "apirusselldias"
+				"logicalId": "apirbwebcontact"
 			},
-			"lastPushTimeStamp": "2020-03-07T10:11:37.938Z",
-			"lastPushDirHash": "HdNCA7/4GI+ImoNUAmx14wUqRwE="
+			"lastPushTimeStamp": "2020-03-22T10:14:56.299Z",
+			"lastPushDirHash": "DyurcAdndE6bHYYmpQ0mrgKFmmI="
 		}
-	}
+	},
+	"function": {}
 }

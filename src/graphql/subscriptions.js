@@ -7,7 +7,7 @@ export const onCreateContact = /* GraphQL */ `
       id
       name
       email
-      description
+      query
     }
   }
 `;
@@ -17,7 +17,7 @@ export const onUpdateContact = /* GraphQL */ `
       id
       name
       email
-      description
+      query
     }
   }
 `;
@@ -27,7 +27,7 @@ export const onDeleteContact = /* GraphQL */ `
       id
       name
       email
-      description
+      query
     }
   }
 `;

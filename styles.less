@@ -42,3 +42,16 @@
 	display: flex;
 	padding: 80px 10%;
 }
+
+.cardContainer {
+	box-shadow: 0px -2px 23px 0px rgba(0, 0, 0, 0.04);
+	width: 500px;
+	border-radius: 12px;
+	transform: perspective(1px) translateZ(0);
+	transition-duration: 0.3s;
+}
+
+.cardContainer:hover {
+	transform: scale(1.01);
+	box-shadow: 0px -2px 23px 0px rgba(0, 0, 0, 0.1);
+}

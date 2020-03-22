@@ -7,7 +7,7 @@ export const getContact = /* GraphQL */ `
       id
       name
       email
-      description
+      query
     }
   }
 `;
@@ -22,7 +22,7 @@ export const listContacts = /* GraphQL */ `
         id
         name
         email
-        description
+        query
       }
       nextToken
     }

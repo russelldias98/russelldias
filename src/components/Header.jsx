@@ -1,25 +1,28 @@
-import React from "react";
-import Link from "next/link";
-import { Typography } from "antd";
-import "../../styles.less";
+import React from 'react';
+import Link from 'next/link';
+import { Typography } from 'antd';
+import '../../styles.less';
 
 const { Text } = Typography;
 
 export default function Header() {
-	return (
-		<div className='headerContainer'>
-			<Link href='/'>
-				<div
-					style={{
-						color: "white",
-						fontWeight: 600,
-						cursor: "pointer",
-						fontSize: "26px"
-					}}
-				>
-					RD
-				</div>
-			</Link>
-		</div>
-	);
+  return (
+    <div className="headerContainer">
+      <Link href="/">
+        <div
+          style={{
+            color: 'white',
+            fontWeight: 600,
+            cursor: 'pointer',
+            fontSize: '26px',
+          }}
+        >
+          RD
+        </div>
+      </Link>
+      <Link href="/contact">
+        <Text style={{ color: 'white' }}>Contact</Text>
+      </Link>
+    </div>
+  );
 }
