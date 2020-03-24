@@ -13,6 +13,7 @@ import { Card, Button } from 'antd';
 
 export default function index() {
   const [client, SetClient] = useState(false);
+  const [put, SetPut] = useState(null);
 
   useEffect(() => {
     SetClient(true);
@@ -46,7 +47,7 @@ export default function index() {
                 }}
                 validationSchema={QuerySchema}
                 onSubmit={async ({ name, email, query }, { setSubmitting }) => {
-                  const verifyPin = await API.graphql(
+                  const postData = await API.graphql(
                     graphqlOperation(mutations.createContact, {
                       input: {
                         id: v4(),
@@ -56,9 +57,13 @@ export default function index() {
                       },
                     }),
                   );
-                  if (verifyPin.data.getClientURLHash) {
+                  if (postData.data.createContact) {
                     setSubmitting(false);
-                    setChecked(true);
+                    SetPut(true);
+                  }
+                  if (!postData.data.createContact) {
+                    setSubmitting(false);
+                    SetPut(false);
                   }
                 }}
               >

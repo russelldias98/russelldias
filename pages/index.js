@@ -34,7 +34,7 @@ export default function index() {
         <Header />
         <div className="containerDivider">
           <div className="contentContainer">
-            <H1 text={`I'm Russell Dias\nA UI/UX Designer and\na Frontend Engineer`} />
+            <H1 text={`Hi, I'm Russell Dias.\nA UI/UX Designer and\na Frontend Engineer`} />
             <BodyText
               text={`My work ranges from creating Landing Page\ndesigns all the way to product design\nand engineering it.`}
             />
