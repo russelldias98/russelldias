@@ -1,13 +1,16 @@
 import React from 'react';
 
-export default function H1(props) {
+interface Props {
+  text: string;
+}
+
+const H1: React.FC<Props> = ({ text }) => {
   return (
     <h1
-      {...props}
       style={{
         fontFamily: 'Inter',
         fontStyle: 'normal',
-        fontWeight: '900',
+        fontWeight: 900,
         fontSize: '46px',
         lineHeight: '64px',
         color: 'white',
@@ -16,7 +19,9 @@ export default function H1(props) {
         marginBottom: '20px',
       }}
     >
-      {props.text}
+      {text}
     </h1>
   );
-}
+};
+
+export default H1;

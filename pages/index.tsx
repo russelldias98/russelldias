@@ -11,14 +11,20 @@ import { API } from 'aws-amplify';
 import config from '../src/aws-exports';
 API.configure(config);
 
-export default function index() {
-  const [client, SetClient] = useState(false);
+interface defaultOptions {
+  loop: boolean;
+  autoplay: boolean;
+  animationData: any;
+}
+
+const index: React.FC = () => {
+  const [client, SetClient] = useState<boolean>(false);
 
   useEffect(() => {
     SetClient(true);
   }, []);
 
-  const defaultOptions = {
+  const defaultOptions: defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: animationData,
@@ -39,7 +45,7 @@ export default function index() {
               text={`My work ranges from creating Landing Page\ndesigns all the way to product design\nand engineering it.`}
             />
             <ButtonCustom
-              onClick={() =>
+              onClick={(): Window =>
                 client &&
                 window.open(
                   'https://drive.google.com/drive/folders/13ZYw0i-Y7z11Cxnt6UoeGvr9sFllLrWz',
@@ -57,4 +63,5 @@ export default function index() {
       </div>
     </>
   );
-}
+};
+export default index;

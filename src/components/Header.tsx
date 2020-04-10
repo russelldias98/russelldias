@@ -5,7 +5,7 @@ import '../../styles.less';
 
 const { Text } = Typography;
 
-export default function Header() {
+const Header: React.FC<{}> = () => {
   return (
     <div className="headerContainer">
       <Link href="/">
@@ -25,4 +25,6 @@ export default function Header() {
       </Link>
     </div>
   );
-}
+};
+
+export default Header;

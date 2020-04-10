@@ -4,7 +4,17 @@ import { ErrorMessage } from 'formik';
 const { Text } = Typography;
 const { TextArea } = Input;
 
-export default function InputLabel({
+interface Props {
+  handleBlur: any;
+  handleChange: any;
+  typeOf: string;
+  nameFormik: string;
+  value: string;
+  label: string;
+  placeholder: string;
+}
+
+const InputLabel: React.FC<Props> = ({
   handleBlur,
   handleChange,
   typeOf,
@@ -12,12 +22,12 @@ export default function InputLabel({
   value,
   label,
   placeholder,
-}) {
+}) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '15px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Text style={{ marginBottom: '5px' }}>{label}</Text>
-        <ErrorMessage name={nameFormik}>{msg => <Text type="danger">{msg}</Text>}</ErrorMessage>
+        <ErrorMessage name={nameFormik}>{(msg) => <Text type="danger">{msg}</Text>}</ErrorMessage>
       </div>
       {nameFormik === 'query' ? (
         <TextArea
@@ -41,4 +51,6 @@ export default function InputLabel({
       )}
     </div>
   );
-}
+};
+
+export default InputLabel;

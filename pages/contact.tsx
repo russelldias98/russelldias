@@ -11,9 +11,15 @@ import { v4 } from 'uuid';
 import { Formik, Form } from 'formik';
 import { Card, Button } from 'antd';
 
+interface Values {
+  name: string;
+  email: string;
+  query: string;
+}
+
 export default function index() {
-  const [client, SetClient] = useState(false);
-  const [put, SetPut] = useState(null);
+  const [client, SetClient] = useState<boolean>(false);
+  const [put, SetPut] = useState<boolean>(null);
 
   useEffect(() => {
     SetClient(true);
@@ -21,9 +27,7 @@ export default function index() {
 
   const QuerySchema = Yup.object().shape({
     name: Yup.string().required('Please enter your name'),
-    email: Yup.string()
-      .email('Please enter a valid email')
-      .required('Please enter your email'),
+    email: Yup.string().email('Please enter a valid email').required('Please enter your email'),
     query: Yup.string().required('Please enter your query'),
   });
 
@@ -46,7 +50,7 @@ export default function index() {
                   query: '',
                 }}
                 validationSchema={QuerySchema}
-                onSubmit={async ({ name, email, query }, { setSubmitting }) => {
+                onSubmit={async ({ name, email, query }: Values, { setSubmitting }) => {
                   const postData = await API.graphql(
                     graphqlOperation(mutations.createContact, {
                       input: {
