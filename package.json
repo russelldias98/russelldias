@@ -7,6 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/uuid": "^7.0.2",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.5.4",
     "aws-amplify": "^2.2.6",
