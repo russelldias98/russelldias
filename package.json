@@ -10,7 +10,7 @@
     "@types/uuid": "^7.0.2",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.5.4",
-    "aws-amplify": "^2.2.6",
+    "aws-amplify": "^3.0.8",
     "babel-plugin-import": "^1.7.0",
     "formik": "^2.1.4",
     "less": "3.0.4",
