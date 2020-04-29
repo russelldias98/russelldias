@@ -9,7 +9,7 @@
   "dependencies": {
     "@types/uuid": "^7.0.2",
     "@zeit/next-less": "^1.0.1",
-    "antd": "^3.5.4",
+    "antd": "^4.2.0",
     "aws-amplify": "^3.0.8",
     "babel-plugin-import": "^1.7.0",
     "formik": "^2.1.4",
