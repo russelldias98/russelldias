@@ -1,27 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
-import { Typography } from 'antd';
 import '../../styles.less';
-
-const { Text } = Typography;
 
 const Header: React.FC<{}> = () => {
   return (
     <div className="headerContainer">
+      <div className="headerTopLine" />
       <Link href="/">
         <div
           style={{
-            color: 'white',
-            fontWeight: 600,
+            color: '#0045ff',
+            fontWeight: 900,
             cursor: 'pointer',
             fontSize: '26px',
+            padding: '30px 20%',
           }}
         >
-          RD
+          Russell Dias
         </div>
-      </Link>
-      <Link href="/contact">
-        <Text style={{ color: 'white' }}>Contact</Text>
       </Link>
     </div>
   );

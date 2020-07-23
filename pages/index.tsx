@@ -7,9 +7,6 @@ import Header from '../src/components/Header';
 import H1 from '../src/components/H1';
 import BodyText from '../src/components/BodyText';
 import ButtonCustom from '../src/components/ButtonCustom';
-import { API } from 'aws-amplify';
-import config from '../src/aws-exports';
-API.configure(config);
 
 interface defaultOptions {
   loop: boolean;
@@ -40,9 +37,9 @@ const index: React.FC = () => {
         <Header />
         <div className="containerDivider">
           <div className="contentContainer">
-            <H1 text={`Hi, I'm Russell Dias.\nA UI/UX Designer and\na Frontend Engineer`} />
+            <H1 text={`I'm a UI/UX Designer &\na Frontend Engineer`} />
             <BodyText
-              text={`My work ranges from creating Landing Page\ndesigns all the way to product design\nand engineering it.`}
+              text={`I've started out as a UI/UX Engineer\nand now I do Frontend Development! `}
             />
             <ButtonCustom
               onClick={(): Window =>
@@ -64,4 +61,5 @@ const index: React.FC = () => {
     </>
   );
 };
+
 export default index;

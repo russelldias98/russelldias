@@ -10,12 +10,12 @@ const BodyText: React.FC<Props> = ({ text }) => {
       style={{
         fontFamily: 'Inter',
         fontWeight: 300,
-        fontSize: '18px',
-        lineHeight: '32px',
-        color: 'white',
+        fontSize: '20px',
+        lineHeight: '36px',
+        color: '#333',
         whiteSpace: 'pre',
         margin: 0,
-        marginBottom: '40px',
+        marginBottom: '60px',
       }}
     >
       {text}

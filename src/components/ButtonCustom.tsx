@@ -11,15 +11,17 @@ const ButtonCustom: React.FC<Props> = ({ text, ...props }) => {
     <Button
       {...props}
       style={{
-        width: '163px',
-        height: '60px',
+        width: '300px',
+        height: '70px',
         fontFamily: 'Inter',
         fontStyle: 'normal',
         fontWeight: 'bold',
         fontSize: '18px',
         lineHeight: '34px',
         textAlign: 'center',
-        color: 'black',
+        color: '#fff',
+        backgroundColor: '#0045ff',
+        borderRadius: '16px',
       }}
     >
       {text}
