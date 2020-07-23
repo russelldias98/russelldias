@@ -39,7 +39,7 @@ const index: React.FC = () => {
           <div className="contentContainer">
             <H1 text={`I'm a UI/UX Designer &\na Frontend Engineer`} />
             <BodyText
-              text={`I've started out as a UI/UX Engineer\nand now I do Frontend Development! `}
+              text={`I've started out as a UI/UX Engineer\nand now I do Frontend Development!`}
             />
             <ButtonCustom
               onClick={(): Window =>
